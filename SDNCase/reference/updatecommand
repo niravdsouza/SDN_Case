@@ -1,0 +1,21 @@
+curl -X POST -d '{
+    "dpid": 
+    "cookie": 1,
+    "cookie_mask": 1,
+    "table_id": 0,
+    "idle_timeout": 30,
+    "hard_timeout": 30,
+    "priority": 11111,
+    "flags": 1,
+    "match":{
+        "ipv4_dst": 
+	"eth_type": 2048
+    },
+    "actions":[
+        {
+            "type":"OUTPUT",
+            "port": 
+        }
+    ]
+ }' http://localhost:8080/stats/flowentry/modify
+
